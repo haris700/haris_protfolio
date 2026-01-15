@@ -1,48 +1,50 @@
 import Image from 'next/image';
+import { SiGithub, SiLinkedin } from 'react-icons/si';
 
 export default function Hero() {
     return (
-        <section className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
-            {/* Background elements */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-primary/20 rounded-full blur-[120px]" />
-                <div className="absolute top-[20%] -right-[10%] w-[40%] h-[40%] bg-secondary/20 rounded-full blur-[120px]" />
-            </div>
+        <section className="min-h-[85vh] flex items-center justify-center pt-20 md:pt-0">
+            <div className="container-clean flex flex-col md:flex-row items-center gap-10 md:gap-20">
 
-            <div className="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12">
-                <div className="flex-1 text-center md:text-left">
-                    <div className="inline-block px-3 py-1 mb-4 rounded-full bg-white/5 border border-white/10 text-primary text-sm font-medium">
+                <div className="flex-1 text-center md:text-left order-2 md:order-1">
+                    <div className="inline-block px-3 py-1 mb-4 rounded-md bg-white/5 text-muted text-[10px] font-bold tracking-widest border border-white/5 uppercase">
                         Available for new opportunities
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-                        Hi, I'm <span className="text-gradient">Haris V K</span>
+                    <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tighter text-foreground">
+                        Haris V K
                     </h1>
-                    <h2 className="text-2xl md:text-3xl text-slate-400 mb-8 font-light">
-                        Software Engineer – Frontend Focused
+                    <h2 className="text-lg md:text-xl text-muted mb-4 font-normal leading-relaxed">
+                        Senior Frontend Engineer & <br className="hidden md:block" /> Product Architect
                     </h2>
-                    <p className="text-lg text-slate-400 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
-                        Specializing in building scalable web applications with React, TypeScript, and Modern UI/UX. Creating digital experiences that live on the internet.
+
+                    {/* Social Links */}
+                    <div className="flex justify-center md:justify-start gap-4 mb-8">
+                        <a href="https://github.com/haris700/" target="_blank" className="text-slate-400 hover:text-white transition-colors text-2xl"><SiGithub /></a>
+                        <a href="https://www.linkedin.com/in/harisvk700" target="_blank" className="text-slate-400 hover:text-[#0A66C2] transition-colors text-2xl"><SiLinkedin /></a>
+                    </div>
+
+                    <p className="text-sm md:text-base text-slate-400 mb-8 max-w-lg mx-auto md:mx-0 leading- relaxed">
+                        Designing and building scalable web ecosystems. I bridge the gap between complex engineering requirements and intuitive user experiences.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
                         <a
                             href="#projects"
-                            className="px-8 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-full transition-all shadow-[0_0_20px_-5px_var(--primary)] text-center"
+                            className="px-6 py-2.5 bg-white text-slate-950 font-bold rounded-md hover:bg-slate-200 transition-colors text-xs uppercase tracking-wide"
                         >
-                            View My Work
+                            View Selected Work
                         </a>
                         <a
                             href="/resume_1.png"
                             target="_blank"
-                            className="px-8 py-3 bg-white/5 hover:bg-white/10 text-white font-medium rounded-full border border-white/10 transition-all text-center"
+                            className="px-6 py-2.5 bg-transparent text-slate-300 font-bold rounded-md border border-slate-800 hover:border-slate-600 hover:text-white transition-colors text-xs uppercase tracking-wide"
                         >
-                            View Resume
+                            Resume
                         </a>
                     </div>
                 </div>
 
-                <div className="relative group">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-50 group-hover:opacity-100 transition duration-1000"></div>
-                    <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/10 bg-slate-800">
+                <div className="relative order-1 md:order-2">
+                    <div className="relative w-40 h-40 md:w-60 md:h-60 rounded-full overflow-hidden border-2 border-slate-800 grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
                         <Image
                             src="/profile.jpg"
                             alt="Haris V K"
@@ -52,6 +54,7 @@ export default function Hero() {
                         />
                     </div>
                 </div>
+
             </div>
         </section>
     );
