@@ -28,13 +28,13 @@ export default function Hero() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
                         <a
-                            href="#projects"
+                            href="/haris_portfolio#projects"
                             className="px-6 py-2.5 bg-white text-slate-950 font-bold rounded-md hover:bg-slate-200 transition-colors text-xs uppercase tracking-wide"
                         >
                             View Selected Work
                         </a>
                         <a
-                            href="/resume_1.png"
+                            href="/haris_portfolio/resume_1.png"
                             target="_blank"
                             className="px-6 py-2.5 bg-transparent text-slate-300 font-bold rounded-md border border-slate-800 hover:border-slate-600 hover:text-white transition-colors text-xs uppercase tracking-wide"
                         >
@@ -46,11 +46,12 @@ export default function Hero() {
                 <div className="relative order-1 md:order-2">
                     <div className="relative w-40 h-40 md:w-60 md:h-60 rounded-full overflow-hidden border-2 border-slate-800 grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
                         <Image
-                            src="/profile.jpg"
+                            src="/haris_portfolio/profile.jpg"
                             alt="Haris V K"
                             fill
                             className="object-cover"
                             priority
+                            unoptimized
                         />
                     </div>
                 </div>
