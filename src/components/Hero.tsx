@@ -35,7 +35,7 @@ export default function Hero() {
                             View Selected Work
                         </a>
                         <a
-                            href="/haris_portfolio/resume_1.png"
+                            href={process.env.NODE_ENV === 'production' ? "/haris_protfolio/Haris_resume.pdf" : "/Haris_resume.pdf"}
                             target="_blank"
                             className="px-6 py-2.5 bg-transparent text-slate-300 font-bold rounded-md border border-slate-800 hover:border-slate-600 hover:text-white transition-colors text-xs uppercase tracking-wide"
                         >
